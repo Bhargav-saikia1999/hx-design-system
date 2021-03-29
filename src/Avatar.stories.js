@@ -5,6 +5,10 @@ import { Avatar } from "./Avatar";
 export default {
   title: "Design System/Avatar",
   component: Avatar,
+  parameters: {
+    componentSubtitle:
+      "Displays an image that represents a user or organization",
+  },
 };
 
 export const Standard = (args) => <Avatar {...args} />;
@@ -26,6 +30,12 @@ Sizes.args = {
   username: "Tom Coleman",
   src: "https://avatars2.githubusercontent.com/u/132554",
 };
+Sizes.parameters = {
+  docs: {
+    // The story now contains a description
+    storyDescription: "4 sizes are supported.",
+  },
+};
 
 export const Initials = (args) => (
   <div>
@@ -35,6 +45,12 @@ export const Initials = (args) => (
     <Avatar username="Michael Shilman" />
   </div>
 );
+Initials.parameters = {
+  docs: {
+    // The story now contains a description
+    storyDescription: "Shows the initials of the names.",
+  },
+};
 
 export const Loading = (args) => (
   <div>
@@ -46,6 +62,12 @@ export const Loading = (args) => (
 );
 Loading.args = {
   loading: true,
+};
+Loading.parameters = {
+  docs: {
+    // The story now contains a description
+    storyDescription: "Shows the loading state in various sizes.",
+  },
 };
 
 export const Large = (args) => (
@@ -59,6 +81,12 @@ export const Large = (args) => (
     />
   </div>
 );
+Large.parameters = {
+  docs: {
+    // The story now contains a description
+    storyDescription: "Shows a Large Avatar with different items.",
+  },
+};
 
 // New story using controls
 const Template = (args) => <Avatar {...args} />;
@@ -69,4 +97,10 @@ Controls.args = {
   size: "tiny",
   username: "Dominic Nguyen",
   src: "https://avatars2.githubusercontent.com/u/263385",
+};
+Controls.parameters = {
+  docs: {
+    // The story now contains a description
+    storyDescription: "Avatar component with controls.",
+  },
 };
